@@ -1,0 +1,11 @@
+﻿  stdafx.cpp
+d:\vs\sudoku\sudoku\stdafx.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+d:\vs\sudoku\sudoku\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+d:\vs\sudoku\sudoku\targetver.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  sudokuMat.cpp
+  sudoku.cpp
+d:\vs\sudoku\sudoku\sudoku.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  changeTool.cpp
+  正在生成代码...
+  sudoku.vcxproj -> D:\VS\sudoku\Debug\sudoku.exe
+  sudoku.vcxproj -> D:\VS\sudoku\Debug\sudoku.pdb (Partial PDB)
