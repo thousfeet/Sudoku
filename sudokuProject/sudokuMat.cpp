@@ -65,15 +65,20 @@ void sudokuMat::randomMat(int n)
 		}
 		ct.check(); //修正第一项不为5的情况
 		
+		char result[200];
+		int cnt = 0;
 		for (int i = 0; i < 9; i++)
 		{
 			for (int j = 0; j < 9; j++)
 			{
-				out << ct.Mat[i][j] << " "; //打印最终矩阵
+				result[cnt++] = '0' + ct.getMat(i, j);
+				result[cnt++] = ' ';
 			}
-			out << endl;
+			result[cnt++] = '\n';
 		}
-		out << endl;
+		result[cnt++] = '\n';
+		result[cnt] = '\0';
+		out << result;
 	}
 	out.close();
 	return;
