@@ -61,7 +61,10 @@ void changeTool::swapCol(int i, int col1, int col2)
 	{
 		for (int i = 0; i < 9; i++)
 		{
-			swap(Mat[i][col1], Mat[i][col2]);
+			if(Mat[i][col1] != Mat[i][col2])
+			{
+				swap(Mat[i][col1], Mat[i][col2]);
+			}		
 		}
 	}
 }
@@ -88,11 +91,17 @@ void changeTool::swap3Row(int squ1, int squ2)
 */
 void changeTool::swap3Col(int squ1, int squ2)
 {
+	int a, b;
 	for (int i = 0; i < 3; i++)
 	{
+		a = squ1 * 3 + i;
+		b = squ2 * 3 + i;
 		for (int j = 0; j < 9; j++)
 		{
-			swap(Mat[j][squ1 * 3 + i], Mat[j][squ2 * 3 + i]); //交换大列中的每小列的元素
+			if(Mat[j][a] != Mat[j][b])
+			{
+				swap(Mat[j][a], Mat[j][b]); //交换大列中的每小列的元素
+			}		
 		}
 	}
 }
