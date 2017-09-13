@@ -16,6 +16,7 @@ void sudokuMat::randomMat(int n)
 {	
 	ofstream out;
 	out.open("./sudoku.txt", ios::app); //打开文件，将当前结果追加到文件末尾
+	set<string> checkSet;
 
 	while (n--)
 	{
@@ -23,7 +24,7 @@ void sudokuMat::randomMat(int n)
 		int changeTime = changeTimes; //循环次数为50次
 		int changeOption; //随机变换类型
 		int i, a, b; //随机传入参数
-
+		
 		while (changeTime--)
 		{
 			changeOption = rand() % 5;
@@ -65,7 +66,7 @@ void sudokuMat::randomMat(int n)
 		}
 		ct.check(); //修正第一项不为5的情况
 		
-		char result[200];
+		char result[200]; //结果矩阵字符串
 		int cnt = 0;
 		for (int i = 0; i < 9; i++)
 		{
@@ -78,7 +79,14 @@ void sudokuMat::randomMat(int n)
 		}
 		result[cnt++] = '\n';
 		result[cnt] = '\0';
-		out << result;
+
+		string re = result;
+		if (checkSet.find(re) != checkSet.end()) n++; //若找到
+		else
+		{
+			checkSet.insert(re);
+			out << result;
+		}
 	}
 	out.close();
 	return;

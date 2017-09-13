@@ -7,13 +7,13 @@ bool check(char * c); //判断读入的参数n是否为一数字
 
 int main(int argc, char *argv[])
 {
-
+	
 	if (!(argc == 3 && !strcmp(argv[1],"-c") && check(argv[2]))) //判断命令行读入参数的合理性
 	{
 		printf("Arguments error.\n"); //参数不合理，输出错误提示
 		return 1; 
 	}
-
+	
 	int n; //待生成的矩阵个数
 	n = atoi(argv[2]); //字符串转换为数字
 	ofstream out; 

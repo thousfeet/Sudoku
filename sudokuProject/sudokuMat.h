@@ -15,7 +15,7 @@ public:
 	void getMat();          //通过交换获得随机矩阵并打印
 
 private:
-	const int changeTimes = 50;  //变换矩阵次数
+	const int changeTimes = 19;  //变换矩阵次数
 	int initMat[9][9] =          //初始矩阵
 	{
 		{ 5, 7, 4, 6, 3, 1, 8, 9, 2 },
